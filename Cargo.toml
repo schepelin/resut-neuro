@@ -1,0 +1,7 @@
+[package]
+name = "neuro"
+version = "0.1.0"
+authors = ["Maxim Schepelin <m.schepelin@gmail.com>"]
+
+[dependencies]
+rand = "^0.3.0"
