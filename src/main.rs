@@ -1,7 +1,7 @@
 extern crate neuro;
 
 fn main() {
-    let n = neuro::neuron::Neuron::new(5);
-    println!("neuron: {}", n);
-    println!("eval: {}", n.eval(vec![1.0; 5]));
+    let l = neuro::layer::Layer::new(5, 3);
+    println!("{}", l);
+    println!("eval: {:?}", l.eval(&vec![1.0; 3], neuro::sigmoid));
 }
