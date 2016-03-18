@@ -22,7 +22,7 @@ impl fmt::Display for Layer {
 impl Layer {
     pub fn new(neurons_count: i32, inputs_count: i32) -> Layer {
         let mut neurons: Vec<neuron::Neuron> = Vec::new();
-        for i in 0..neurons_count {
+        for _ in 0..neurons_count {
             neurons.push(neuron::Neuron::new(inputs_count));
         }
         Layer {neurons: neurons}

@@ -15,7 +15,7 @@ impl Neuron {
         }
         Neuron{ memory: memory }
     }
-    fn with_config(memory: Vec<f64>) -> Neuron {
+    fn with_memory(memory: Vec<f64>) -> Neuron {
         Neuron { memory: memory }
     }
     pub fn eval(&self, input: &Vec<f64>, func: fn(f64) -> f64) -> f64 {
@@ -31,5 +31,18 @@ impl Neuron {
 impl fmt::Display for Neuron {
     fn fmt(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
         write!(formatter, "Neuron: {:?}", self.memory)
+    }
+}
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_eval() {
+        let neuron = Neuron::with_memory(vec!(1.0, 1.0, 1.0));
+        fn func(x: f64) -> f64 { x };
+        assert_eq!(3.0, neuron.eval(&vec!(1.0, 1.0, 1.0), func));
     }
 }
