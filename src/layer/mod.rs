@@ -4,7 +4,7 @@ use neuron;
 use std::fmt;
 
 pub struct Layer {
-    neurons: Vec<neuron::Neuron>
+    pub neurons: Vec<neuron::Neuron>
 }
 
 impl fmt::Display for Layer {

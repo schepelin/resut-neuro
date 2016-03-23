@@ -4,7 +4,7 @@ extern crate rand;
 
 
 pub struct Neuron {
-    memory: Vec<f64>
+    pub memory: Vec<f64>
 }
 
 impl Neuron {
